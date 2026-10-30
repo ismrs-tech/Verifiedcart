@@ -1,0 +1,92 @@
+{
+  "primary_score": 1.0,
+  "primary_score_range": "best 1.0; 0 = nothing useful; negative = hallucinated prices",
+  "n_truth_questions": 40,
+  "n_missing_predictions": 0,
+  "missing_examples": [],
+  "components": {
+    "action_accuracy": 1.0,
+    "grounded_rate_when_action_correct": 1.0,
+    "grounded_rate_all_answered": 1.0,
+    "mean_helpfulness_when_action_correct": 1.0,
+    "hallucinated_prices_total": 0,
+    "questions_with_hallucinated_price": 0,
+    "price_penalty_total": 0.0,
+    "refusal": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
+    },
+    "clarify": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 8
+    },
+    "answer": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 22
+    }
+  },
+  "confusion_expected_vs_predicted": {
+    "answer": {
+      "answer": 22,
+      "clarify": 0,
+      "refuse": 0,
+      "missing": 0
+    },
+    "clarify": {
+      "answer": 0,
+      "clarify": 8,
+      "refuse": 0,
+      "missing": 0
+    },
+    "refuse": {
+      "answer": 0,
+      "clarify": 0,
+      "refuse": 10,
+      "missing": 0
+    }
+  },
+  "score_by_question_type": {
+    "answer_attribute": 1.0,
+    "answer_compare": 1.0,
+    "answer_filter": 1.0,
+    "answer_lookup": 1.0,
+    "answer_policy": 1.0,
+    "answer_superlative": 1.0,
+    "clarify_ambiguous": 1.0,
+    "refuse_out_of_catalogue": 1.0,
+    "refuse_policy_gap": 1.0,
+    "refuse_unanswerable": 1.0
+  },
+  "latency_ms": {
+    "mean": 4.35,
+    "p50": 0.64,
+    "p95": 14.4,
+    "max": 16.05
+  },
+  "tokens": {
+    "mean_in": 13.0,
+    "mean_out": 33.83,
+    "total_in": 520,
+    "total_out": 1353
+  },
+  "constants": {
+    "W_ACTION": 0.4,
+    "W_GROUNDED": 0.3,
+    "W_HELPFUL": 0.3,
+    "CLARIFY_AS_ANSWER_CREDIT": 0.5,
+    "HALLUCINATED_PRICE_PENALTY": 3.0,
+    "PRECISION_FLOOR": 0.5,
+    "MIN_CLARIFY_CANDIDATES": 2,
+    "PARENT_SECTION_CREDIT": 0.5,
+    "FREE_EXTRA_POLICY_CITATIONS": 1,
+    "MAX_CITED_PRODUCTS": 10,
+    "PRICE_TOLERANCE": 0.5,
+    "RATING_TOLERANCE": 0.05
+  }
+}
